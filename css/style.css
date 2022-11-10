@@ -1,3 +1,15 @@
+header {
+    height: 80px;
+}
+
+footer {
+    height: 30px;
+}
+
+main .container {
+    width: calc(90vh - 110px);
+}
+
 .bg-active {
     background-color: rgb(127,255,212);
 }
@@ -7,7 +19,7 @@
 }
 
 .left-side img {
-    width: 100px;
+    width: 80px;
     background-color: lightgray;
 }
 
@@ -28,6 +40,7 @@ a {
 }
 
 .box {
+    width: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
