@@ -1,0 +1,44 @@
+.bg-active {
+    background-color: rgb(127,255,212);
+}
+
+.bg-blue {
+    background-color: blue;
+}
+
+.left-side img {
+    width: 100px;
+    background-color: lightgray;
+}
+
+.right-side button {
+    width: 100px;
+    border-radius: 10%;
+    background-color: rgb(233,233,237);
+}
+
+select {
+    border-radius: 10%;
+    width: 100px;
+    background-color: rgb(233,233,237)
+}
+
+a {
+    color: rgb(94,69,118);
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    aspect-ratio: 1 / 1;
+}
+
+/* AGGIUNTE DA FARE 
+header .container {
+    border: solid;
+    border-width: 5px;
+    border-color: #808080 white white #808080;
+    background-color: lightgray;
+}*/
