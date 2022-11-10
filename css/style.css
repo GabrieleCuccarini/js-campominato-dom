@@ -10,14 +10,6 @@ main .container {
     width: calc(90vh - 110px);
 }
 
-.bg-active {
-    background-color: rgb(127,255,212);
-}
-
-.bg-blue {
-    background-color: blue;
-}
-
 .left-side img {
     width: 80px;
     background-color: lightgray;
@@ -40,7 +32,6 @@ a {
 }
 
 .box {
-    width: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,10 +39,10 @@ a {
     aspect-ratio: 1 / 1;
 }
 
-/* AGGIUNTE DA FARE 
-header .container {
-    border: solid;
-    border-width: 5px;
-    border-color: #808080 white white #808080;
-    background-color: lightgray;
-}*/
+.bomb-cell-bg {
+    background-color: red;
+}
+
+.active-cell-bg {
+    background-color: green;
+}
