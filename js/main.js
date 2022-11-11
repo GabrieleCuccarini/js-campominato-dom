@@ -88,9 +88,3 @@ function bombsListGenerator (celleTotali) {
     }
     return bombsList;
 }
-
-// function disattivaCelle (celleTotali) {
-//     for (let i = 0; i < celleTotali; i++) {
-//         celleDaDisattivareArray.indexOf(i).removeEventListener( "click", clickOnCella); 
-//         }
-// }      
