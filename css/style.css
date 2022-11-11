@@ -50,7 +50,3 @@ a {
 .gameover {
     pointer-events: none;
 }
-
-.active {
-    border: 1px solid red;
-}

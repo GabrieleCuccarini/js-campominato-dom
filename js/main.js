@@ -19,23 +19,25 @@ function generateRandomNumber ( min, max ) {
 btnPlayEl.addEventListener ("click", function() {
     let difficult = parseInt(chooseDiffEl.value)
     gridEl.innerHTML = ""
+    score.innerHTML = ""
 
     // In base all'opzione disegna la griglia
     if ( difficult === 1 ) {
+        celleTotali = 100
         disegnaGriglia(100, 10); 
         bombs = bombsListGenerator( 100 );
         console.log(bombs);
     } else if ( difficult === 2 ) {
+        celleTotali = 81
         disegnaGriglia(81, 9);
         bombs = bombsListGenerator( 81 );
         console.log(bombs);
     } else if ( difficult === 3 ) {
+        celleTotali = 49
         disegnaGriglia(49, 7);
         bombs = bombsListGenerator( 49 );
         console.log(bombs);
     }   
-    
-
 })
 
 // Imposto la funzione con dentro il ciclo di creazione delle celle
@@ -52,8 +54,8 @@ function disegnaGriglia (celleTotali, cellePerRiga) {
 
             function clickOnCella () {
                 const allCreatedCells = document.querySelectorAll(".box");
-                const nCella = +this.dataset.nCella;
                 const allActiveCells = document.querySelectorAll(".active")
+                const nCella = +this.dataset.nCella;
                 this.classList.add("active")
                 if ( bombs.includes( nCella ) ) {
                     alert( "BOMBA!!! La partita è terminata!" );
@@ -61,13 +63,28 @@ function disegnaGriglia (celleTotali, cellePerRiga) {
                     for (let i = 0; i < allCreatedCells.length; i++) {
                         allCreatedCells[i].classList.add('gameover');                       
                     } 
-                console.log(allActiveCells.length)
                 score.append(allActiveCells.length)
+                } else {
+                    let difficult = parseInt(chooseDiffEl.value)
+                    if ( difficult === 1 ) {
+                        celleTotali = 100
+                    } else if ( difficult === 2 ) {
+                        celleTotali = 81
+                    } else if ( difficult === 3 ) {
+                        celleTotali = 49
+                    }   
+                        this.classList.add( "active-cell-bg" );
+                        const allActiveCells = document.querySelectorAll(".active")
+                        const allCreatedCells = document.querySelectorAll(".box");
+                        if ( allActiveCells.length === celleTotali - 16) {
+                            for (let i = 0; i < allCreatedCells.length; i++) {
+                                allCreatedCells[i].classList.add('gameover');                       
+                            } 
+                            alert("Congratulazioni, hai vinto!")
+                            score.append(allActiveCells.length)     
+                        }
                 }
-                 else {
-                    this.classList.add( "active-cell-bg" );
-                }
-            }      
+            }    
     gridEl.classList.remove("d-none");
     gridEl.classList.add("d-flex");
 }
