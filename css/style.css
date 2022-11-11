@@ -46,3 +46,11 @@ a {
 .active-cell-bg {
     background-color: green;
 }
+
+.gameover {
+    pointer-events: none;
+}
+
+.active {
+    border: 1px solid red;
+}
