@@ -40,7 +40,8 @@ a {
 }
 
 .bomb-cell-bg {
-    background-color: red;
+    background-image: url(../img/bomb.png);
+    background-size: cover;
 }
 
 .active-cell-bg {
